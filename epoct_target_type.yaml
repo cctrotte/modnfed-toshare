@@ -1,0 +1,11 @@
+dxfinal_anemia: binary
+dxfinal_dehyd: binary
+dxfinal_diarrhea: binary
+dxfinal_fws: binary
+dxfinal_malaria: binary
+dxfinal_malnut: binary
+dxfinal_pna: binary
+dxfinal_urti: binary
+dxfinal_bact_pna: binary
+dxfinal_viral_pna_or_common_cold: binary
+n_positive_dxfinal: continuous

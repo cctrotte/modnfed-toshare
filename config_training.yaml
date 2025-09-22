@@ -1,0 +1,17 @@
+model_type: ["modn"]
+seed: [45,]
+
+# Hyperparameters
+state_dim: [4]
+learning_rate: [0.01]
+local_epochs: [5]  # Number of epochs to train locally on each node
+federated_rounds: [3]  # Number of federated learning rounds
+filename: ["tmp.csv"]
+feature_decoding: [False]
+batch_size : [30]
+shuffle: [True]
+predict_all: [True]
+
+hidden_layers_enc: [[16, 16]]
+hidden_layers_dec: [[16, 16]]
+hidden_layers_decoding: [[]]

@@ -1,0 +1,54 @@
+model_type: "modn"
+seed: 45
+# Hyperparameters
+state_dim: 10
+learning_rate: 0.001
+local_epochs: 3  # Number of epochs to train locally on each node
+federated_rounds: 10  # Number of federated learning rounds
+filename: "tmp.csv"
+feature_decoding: False
+batch_size : 50
+shuffle: True
+predict_all: True
+agg_weight: False
+weight_targets: True
+hidden_layers_enc_shared: [16,16, 16]
+hidden_layers_enc_private: []
+hidden_layers_dec_shared: [16,16, 16]
+hidden_layers_dec_private: []
+hidden_layers_decoding: []
+all_: False
+
+# node_variables: {
+#         "node_1": {
+#             "health_facility_id": 270,
+#             "features":[ 'age_c', 'sex_c',  'sao2','hemoglobin', 's_diarrhea_c', 's_fever_c'],
+#             "targets": ["dxfinal_malaria",  "dxfinal_urti"],
+#         },
+#     "node_2": {
+#             "health_facility_id": 329,
+#             "features":['prevention_and_screening', 'age_c',  'resp_rate', 'hemoglobin', 'rr_age_cat', 's_diarrhea_c', 's_fever_c'],
+#             "targets": ["dxfinal_malaria", "dxfinal_anemia", "dxfinal_urti"],
+#         },
+#     }
+
+# 315, 257, 343, 318,
+
+node_variables: {
+    "node_1": {
+        "health_facility_id": 315,
+        "features":['prevention_and_screening', 'sex_c', 's_abdopain_c',  's_cough_c',   ],
+        "targets": ['dxfinal_diarrhea', 'dxfinal_urti', 'dxfinal_viral_pna_or_common_cold',],
+    },
+    "node_2": {
+        "health_facility_id": 257,
+        "features":['prevention_and_screening', 'sex_c', 's_abdopain_c',  's_cough_c',  's_vomit_c', 'wfa_c', 's_runny_nose', ],
+        "targets": ['dxfinal_diarrhea', 'dxfinal_viral_pna_or_common_cold',],
+    },
+    "node_3": {
+        "health_facility_id": 343,
+        "features":['prevention_and_screening', 'sex_c', 's_abdopain_c',  's_cough_c',  's_vomit_c', 'wfa_c', 's_runny_nose', 'heart_rate', 'resp_rate', 'neck_stiffness',  'muac', 'pallor', 'cc_fever',  'cc_eye', 'cc_ear_throat_mouth',  'cc_trauma', 'cc_feeding', 'crp', 'hemoglobin',  'chest_indrawing', ],
+        "targets": ['dxfinal_urti', 'dxfinal_viral_pna_or_common_cold',],
+    },
+
+}

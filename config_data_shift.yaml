@@ -1,0 +1,21 @@
+n_samples: [300, 300, 300, ]
+node_feature_sets:
+    [
+        ["feature1", "feature2","feature3", "feature4", "feature5"],
+        ["feature1", "feature2","feature3", "feature4", "feature5"],
+        ["feature1", "feature2","feature3", "feature4", "feature5"],
+
+    ]
+data_seed: 44
+impute: False
+nan_ratio: [[0.7, 0.2, 0.3, 0.7, 0.5], [0.5, 0.7, 0.3, 0.2, 0.1],[0.2, 0.5, 0.7, 0.4, 0.7], ]
+output_type: "binary"
+shift_types:   [ "none", "cov", "nonlinear"]
+#shift_types:   ["none", "none", "none"]
+
+binarize_feats: [0, 1]
+
+# ["cov", "nonlinear", "mean", "none", "none"]
+# ["none", "none", "none", "none", "none"]
+#  ["none", "none", "none", "none", "none", "none", "none", "none", "none"]
+#  ["cov", "nonlinear", "mean", "cov", "nonlinear", "mean", "cov", "nonlinear", "mean"]

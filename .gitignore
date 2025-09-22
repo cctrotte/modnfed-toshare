@@ -1,0 +1,66 @@
+# Ignore VS Code settings
+.vscode/
+*.code-workspace
+
+# Ignore Python virtual environments
+envir/
+.envir/
+*.venv/
+Pipfile.lock
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.tmp
+
+# Ignore compiled code and cache
+*.egg-info/
+dist/
+build/
+
+#ignore csv
+*.csv
+
+
+# ignore notebooks
+notebooks/
+*.ipynb
+
+# plots
+*.png
+
+# wandb
+wandb/
+artifacts/
+*.pt
+wandb_leo/
+
+saved_models/
+cv_models/
+
+# pickle
+*.pkl
+
+# data
+datasets/
+epoct_plus_cleaned_report.html
+notes_cecile.md
+
+# env variables
+.env
+
+# cluster
+*.slurm

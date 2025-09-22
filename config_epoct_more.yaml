@@ -1,0 +1,135 @@
+model_type: "modn"
+seed: 45
+# Hyperparameters
+state_dim: 30
+learning_rate: 0.001
+local_epochs: 3  # Number of epochs to train locally on each node
+federated_rounds: 2 #400  #400 Number of federated learning rounds
+foldername: "tmp" #"trained_modn_30small_subnoshuffnopred" # "trained_modn_30small_noshuff", "trained_modn_30smallsub_noshuff"
+feature_decoding: False
+batch_size : 200 #1000
+shuffle: True
+predict_all: True
+agg_weight: False
+weight_ce_loss: True
+hidden_layers_enc_shared: [16,16,16,]
+hidden_layers_enc_private: []
+hidden_layers_dec_shared: [16,16,16,]
+hidden_layers_dec_private: []
+hidden_layers_decoding: []
+all_: False #True
+mu: 0.0
+
+# [256, 274, 284, 328, 336]
+node_variables: {
+    "node_1": {
+        "health_facility_id": 256,
+        "features":['prevention_and_screening',
+            'age_c',
+            'sex_c',
+            's_abdopain_c',
+            's_bloodstool_c',
+            's_cough_c',
+            's_diarrhea_c',
+            's_fever_c',
+            's_vomit_c',
+            'stridor_or_grunting',
+            'heart_rate',
+            'neck_stiffness',
+            'grunting_chest_indrawing_difficulty_breathing',
+            'muac',
+            'hemoglobin',
+            'sao2',
+            'malaria_rdt_or_microscopy',],
+        "targets": ['dxfinal_anemia', 'dxfinal_dehyd', 'dxfinal_diarrhea', 'dxfinal_fws', 'dxfinal_malaria', 'dxfinal_malnut', 'dxfinal_pna', 'dxfinal_urti', 'dxfinal_bact_pna', 'dxfinal_viral_pna_or_common_cold',],
+    },
+    "node_2": {
+        "health_facility_id": 274,
+        "features":[            'prevention_and_screening',
+            'age_c',
+            'sex_c',
+            's_abdopain_c',
+            's_bloodstool_c',
+            's_cough_c',
+            's_diarrhea_c',
+            's_fever_c',
+            's_vomit_c',
+            'stridor_or_grunting',
+            'heart_rate',
+            'neck_stiffness',
+            'grunting_chest_indrawing_difficulty_breathing',
+            'muac',
+            'hemoglobin',
+            'sao2',
+            'malaria_rdt_or_microscopy',],
+        "targets": ['dxfinal_anemia', 'dxfinal_dehyd', 'dxfinal_diarrhea', 'dxfinal_fws', 'dxfinal_malaria', 'dxfinal_malnut', 'dxfinal_pna', 'dxfinal_urti', 'dxfinal_bact_pna', 'dxfinal_viral_pna_or_common_cold',],
+    },
+    "node_3": {
+        "health_facility_id": 284,
+        "features":[            
+            'age_c',
+            'sex_c',
+            's_abdopain_c',
+            's_cough_c',
+            's_diarrhea_c',
+            's_fever_c',
+            's_vomit_c',
+            'wfa_c',
+            's_runny_nose',
+            'resp_rate',
+            'neck_stiffness',
+            'muac',
+            'pallor',
+            'hemoglobin',
+            'sao2',
+            'malaria_rdt_or_microscopy',],
+        "targets": ['dxfinal_anemia', 'dxfinal_dehyd', 'dxfinal_diarrhea', 'dxfinal_fws', 'dxfinal_malaria', 'dxfinal_malnut', 'dxfinal_pna', 'dxfinal_urti', 'dxfinal_bact_pna', 'dxfinal_viral_pna_or_common_cold',],
+    },
+
+    "node_4": {
+        "health_facility_id": 328,
+        "features":[            'prevention_and_screening',
+            'age_c',
+            'sex_c',
+            's_bloodstool_c',
+            's_cough_c',
+            's_diarrhea_c',
+            's_fever_c',
+            's_vomit_c',
+            'wfa_c',
+            's_runny_nose',
+            'stridor_or_grunting',
+            'neck_stiffness',
+            'grunting_chest_indrawing_difficulty_breathing',
+            'muac',
+            'pallor',
+            'hemoglobin',
+            'sao2',
+            'malaria_rdt_or_microscopy',],
+        "targets": ['dxfinal_anemia', 'dxfinal_dehyd', 'dxfinal_diarrhea', 'dxfinal_fws', 'dxfinal_malaria', 'dxfinal_malnut', 'dxfinal_pna', 'dxfinal_urti', 'dxfinal_bact_pna', 'dxfinal_viral_pna_or_common_cold',],
+    },
+    "node_5": {
+        "health_facility_id": 336,
+        "features": [            'prevention_and_screening',
+            'age_c',
+            'sex_c',
+            's_abdopain_c',
+            's_bloodstool_c',
+            's_cough_c',
+            's_diarrhea_c',
+            's_fever_c',
+            's_vomit_c',
+            'wfa_c',
+            'heart_rate',
+            'resp_rate',
+            'neck_stiffness',
+            'grunting_chest_indrawing_difficulty_breathing',
+            'pallor',
+            'hemoglobin',
+            'sao2',
+            'malaria_rdt_or_microscopy',],
+        "targets": ['dxfinal_anemia', 'dxfinal_dehyd', 'dxfinal_diarrhea', 'dxfinal_fws', 'dxfinal_malaria', 'dxfinal_malnut', 'dxfinal_pna', 'dxfinal_urti', 'dxfinal_bact_pna', 'dxfinal_viral_pna_or_common_cold', ],
+    },
+
+}
+

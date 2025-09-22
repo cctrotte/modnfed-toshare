@@ -1,0 +1,28 @@
+model_type: "modn"
+seed: 45
+# Hyperparameters
+learning_rate: 0.001
+local_epochs: 3  # Number of epochs to train locally on each node
+federated_rounds: 600 #1000 #400  # Number of federated learning rounds
+foldername: "final30small_5f/saved_modn_sub_tar" # "saved_models_bsl"
+feature_decoding: False
+batch_size : 200 #200
+shuffle: True
+predict_all: True
+agg_weight: False
+weight_ce_loss: True
+#cv_params : {
+# state_dim: [30],
+# hidden_layers_enc: [[16,16], [16,16,16], [32, 32] ], #[[16,16,16], [16,16,16,16], [16,16,16,16,16]],
+# hidden_layers_dec: [[16, 16], [16, 16, 16], [32, 32]],
+# "mu": [0.0], #[0.0, 0.001],
+# } 
+cv_params : {
+state_dim: [30],
+hidden_layers: [[16, 16, 16]], #[[16,16,16], [16,16,16,16], [16,16,16,16,16]], [16, 16, 16]
+"mu": [0.0], # 0.0001
+}
+
+all_: True
+percentage: 1
+
